@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char date[10];
+    int n,nc,opt;
+    clrscr();
+    printf("\n Enter date: ");
+    scanf("%10s",&date);
+
+    clrscr();
+    printf("\n Customer date %s ",date);
+
+    printf("\n \n");
+
+    FILE *f;
+    char c;
+    f=fopen("SAVEDATA.txt","r");
+    while((c=fgetc(f))!=EOF)
+    {
+	printf("%c",c);
+    }
+
+    fclose(f);
+    printf("\n \n");
+
+    printf("\nIf you want a car,please enter 1:");
+    scanf("%d",& n);
+    if(n==1)
+    {
+
+   
+      printf("\n Enter car ID: ");
+      scanf("%d",nc);
+
+      f=fopen("Book.txt","w");
+      if(nc==3)
+      {
+       fprintf(f,"3\t1\t%s\nBooking is Succesfully",date);
+      }
+      else
+      {
+        printf("This Vehicle is allready booked");
+      }
+
+    fclose(f);
+
+    }
+
+
+    else
+    {
+    printf("Invalid enter number");
+    }
+     
+    f=fopen("Book.txt","r");
+     while((c=fgetc(f))!=EOF)
+    {
+	printf("%c",c);
+    }
+    getch();
+    fclose(f);
+    
+    clrscr();
+    printf("\n\t ---Menu---");
+    printf("\n 1.Want a driver");
+    printf("\n 2.EXIT");
+
+    getch();
+    return 0;
+}

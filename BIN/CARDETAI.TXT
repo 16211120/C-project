@@ -1,0 +1,12 @@
+New Record 
+Car ID 	 1-comfortable,2-economical
+ 11 	 	 1
+ 12 	 	 1
+ 13 	 	 1
+ 14 	 	 1
+ 15 	 	 1
+ 16 	 	 2
+ 17 	 	 2
+ 18 	 	 2
+ 19 	 	 2
+ 20 	 	 2
